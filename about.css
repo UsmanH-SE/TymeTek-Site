@@ -1,0 +1,157 @@
+:root {
+  --primary: #2563EB;
+  --primary-dark: #1E40AF;
+  --dark: #F8FAFC;
+  --text: #CBD5E1;
+  --bg-dark: #0F172A;
+  --border: #334155;
+  --accent: #22D3EE;
+}
+
+/* GLOBAL BODY */
+body {
+  margin: 0;
+  font-family: 'Roboto', 'Inter', sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.7;
+  background-color: var(--bg-dark);
+  color: var(--text);
+}
+
+/* ABOUT SECTION */
+#about {
+  padding: 100px 0;
+  background-color: var(--bg-dark);
+  position: relative;
+}
+
+/* ==========================
+   Animated Heading
+========================== */
+#about h2 {
+  font-size: 50px;
+  font-weight: 700;
+  color: var(--primary);
+  text-align: center;
+  margin-bottom: 20px;
+  opacity: 0;
+  animation: fadeInDown 1s forwards;
+}
+
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+#about .text-muted {
+  max-width: 700px;
+  margin: auto;
+  text-align: center;
+  color: var(--text);
+  font-size: 1.1rem;
+  margin-bottom: 60px;
+}
+
+/* CONTENT BLOCKS */
+#about h4,
+#about h5 {
+  color: var(--primary);
+  font-weight: 600;
+}
+
+#about p {
+  line-height: 1.8;
+  font-size: 0.95rem;
+  color: var(--text);
+}
+
+/* IMAGE STYLING */
+#about img {
+  border-radius: 16px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+}
+
+/* ==========================
+   FEATURE / ICON BOXES
+========================== */
+.feature-box {
+  background: #1E293B;
+  border-radius: 16px;
+  padding: 30px 20px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid #334155;
+}
+
+.feature-box:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 40px rgba(37, 99, 235, 0.4);
+  border-color: var(--primary);
+}
+
+.feature-box i {
+  font-size: 30px;
+  color: var(--accent);
+  margin-bottom: 15px;
+}
+
+/* ==========================
+   WORK PROCESS ROW
+========================== */
+#about .row.text-center > div {
+  font-weight: 500;
+  padding: 20px 10px;
+  border-radius: 12px;
+  transition: 0.3s ease;
+  background-color: #1E293B;
+  margin-bottom: 15px;
+}
+
+#about .row.text-center > div:hover {
+  background-color: var(--primary);
+  color: var(--bg-dark);
+}
+
+/* ==========================
+   CTA BUTTON
+========================== */
+#about .btn-primary {
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+  border: none;
+  padding: 14px 36px;
+  border-radius: 50px;
+  font-weight: 600;
+  letter-spacing: 0.4px;
+  transition: all 0.3s ease;
+}
+
+#about .btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 35px rgba(37, 99, 235, 0.4);
+}
+
+/* ==========================
+   RESPONSIVE FIXES
+========================== */
+@media (max-width: 992px) {
+  #about {
+    padding: 80px 20px;
+  }
+
+  #about img {
+    margin-top: 30px;
+  }
+}
+
+@media (max-width: 576px) {
+  #about h2 {
+    font-size: 38px;
+  }
+}
