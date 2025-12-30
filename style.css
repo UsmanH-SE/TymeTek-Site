@@ -29,7 +29,7 @@ body> h1, h2, h3, h4, h5, h6 {
 }
 
 .header-container {
-  max-width: 1200px;
+  max-width: 1300px;
   margin: auto;
   height: 80px;
   padding: 0 6%;
@@ -60,7 +60,7 @@ body> h1, h2, h3, h4, h5, h6 {
 
 .nav-btn {
   background: #1e90ff;
-  color: #fff !important;
+  color: #fff ;
   padding: 8px 18px;
   border-radius: 30px;
 }
