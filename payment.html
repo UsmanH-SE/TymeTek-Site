@@ -21,13 +21,15 @@
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
       <a href="services.html">Services</a>
-      <a href="pricing.html">Pricing</a>
-      <a href="payment.html">Payment</a>
-      <a href="support.html" class="nav-btn">Contact</a>
+     
+
+     
     </nav>
 
   </div>
 </header>
+
+
 
 <section id="payments" class="py-5 bg-white">
   <div class="container mt-5">
@@ -40,47 +42,149 @@
       </p>
     </div>
 
+
+
+
     <div class="row g-4 text-center mb-5">
-      <div class="col-md-3">
-        <div class="payment-card shadow-sm h-100">
-          <div class="payment-icon-wrapper mb-3">
-            <i class="bi bi-bank"></i>
-          </div>
-          <h5 class="fw-bold">Bank Transfer</h5>
-          <p class="text-muted small">Direct secure payments via PKR accounts for local clients.</p>
-        </div>
-      </div>
 
-      <div class="col-md-3">
-        <div class="payment-card shadow-sm h-100">
-          <div class="payment-icon-wrapper mb-3">
-            <i class="bi bi-globe-americas"></i>
-          </div>
-          <h5 class="fw-bold">Payoneer</h5>
-          <p class="text-muted small">The preferred choice for our international partners (USD).</p>
-        </div>
+  <div class="col-md-3">
+    <div class="payment-card shadow-sm h-100" data-method="bank" onclick="selectPayment(this)">
+      <div class="payment-icon-wrapper mb-3">
+        <i class="bi bi-bank"></i>
       </div>
-
-      <div class="col-md-3">
-        <div class="payment-card shadow-sm h-100">
-          <div class="payment-icon-wrapper mb-3">
-            <i class="bi bi-wallet2"></i>
-          </div>
-          <h5 class="fw-bold">EasyPaisa</h5>
-          <p class="text-muted small">Instant and convenient mobile wallet transfers.</p>
-        </div>
-      </div>
-
-      <div class="col-md-3">
-        <div class="payment-card shadow-sm h-100">
-          <div class="payment-icon-wrapper mb-3">
-            <i class="bi bi-phone-vibrate"></i>
-          </div>
-          <h5 class="fw-bold">JazzCash</h5>
-          <p class="text-muted small">Quick digital payments via JazzCash mobile accounts.</p>
-        </div>
-      </div>
+      <h5 class="fw-bold">Bank Transfer</h5>
+      <p class="text-muted small">Direct secure payments via PKR accounts for local clients.</p>
     </div>
+  </div>
+  
+
+  <div class="col-md-3">
+    <div class="payment-card shadow-sm h-100" data-method="payoneer" onclick="selectPayment(this)">
+      <div class="payment-icon-wrapper mb-3">
+        <i class="bi bi-globe-americas"></i>
+      </div>
+      <h5 class="fw-bold">Payoneer</h5>
+      <p class="text-muted small">The preferred choice for our international partners (USD).</p>
+    </div>
+  </div>
+
+  <div class="col-md-3">
+    <div class="payment-card shadow-sm h-100" data-method="easypaisa" onclick="selectPayment(this)">
+      <div class="payment-icon-wrapper mb-3">
+        <i class="bi bi-wallet2"></i>
+      </div>
+      <h5 class="fw-bold">EasyPaisa</h5>
+      <p class="text-muted small">Instant and convenient mobile wallet transfers.</p>
+    </div>
+  </div>
+
+  <div class="col-md-3">
+    <div class="payment-card shadow-sm h-100" data-method="wise" onclick="selectPayment(this)">
+      <div class="payment-icon-wrapper mb-3">
+        <i class="bi bi-globe-americas"></i>
+      </div>
+      <h5 class="fw-bold">Wise</h5>
+      <p class="text-muted small">The preferred choice for our international partners (USD).</p>
+    </div>
+  </div>
+
+  <div class="col-md-3">
+    <div class="payment-card shadow-sm h-100" data-method="jazzcash" onclick="selectPayment(this)">
+      <div class="payment-icon-wrapper mb-3">
+        <i class="bi bi-phone-vibrate"></i>
+      </div>
+      <h5 class="fw-bold">JazzCash</h5>
+      <p class="text-muted small">Quick digital payments via JazzCash mobile accounts.</p>
+    </div>
+  </div>
+
+</div>
+
+<div id="payment-details" style="display:none; margin-top:40px;">
+
+  <div class="method-details" id="bank">
+    <h5>Bank Transfer Details</h5>
+    <p><strong>Bank:</strong> Meezan Bank</p>
+    <p><strong>Account Title:</strong> Tyme Tek</p>
+    <p><strong>Account Number:</strong> XXXX-XXXX</p>
+    <p><strong>IBAN:</strong> PKXX XXXX XXXX</p>
+    <p><strong>Currency:</strong> PKR / USD</p>
+    <p><em>Please use your company name or email as reference.</em></p>
+    <button class="btn btn-primary mt-2" onclick="openConfirmation('Bank Transfer')">
+      I have completed payment
+    </button>
+  </div>
+
+  <div class="method-details" id="payoneer">
+    <h5>Payoneer Payment</h5>
+    <p><strong>Email:</strong> payments@tymetek.com</p>
+    <p><strong>Currency:</strong> USD</p>
+    <button class="btn btn-primary mt-2" onclick="openConfirmation('Payoneer')">
+      I have completed payment
+    </button>
+  </div>
+
+  <div class="method-details" id="easypaisa">
+    <h5>EasyPaisa Details</h5>
+    <p><strong>Account Name:</strong> Tyme Tek</p>
+    <p><strong>Mobile:</strong> 03XX-XXXXXXX</p>
+    <button class="btn btn-primary mt-2" onclick="openConfirmation('EasyPaisa')">
+      I have completed payment
+    </button>
+  </div>
+
+  <div class="method-details" id="wise">
+    <h5>Wise Transfer</h5>
+    <p><strong>Account Name:</strong> Tyme Tek</p>
+    <p><strong>IBAN:</strong> XXXX XXXX XXXX</p>
+    <p><strong>Currency:</strong> USD / EUR</p>
+    <button class="btn btn-primary mt-2" onclick="openConfirmation('Wise')">
+      I have completed payment
+    </button>
+  </div>
+
+  <div class="method-details" id="jazzcash">
+    <h5>JazzCash Details</h5>
+    <p><strong>Account Name:</strong> Tyme Tek</p>
+    <p><strong>Mobile:</strong> 03XX-XXXXXXX</p>
+    <button class="btn btn-primary mt-2" onclick="openConfirmation('JazzCash')">
+      I have completed payment
+    </button>
+  </div>
+
+</div>
+
+<div id="payment-confirmation" style="display:none; margin-top:40px;">
+  <h5>Payment Confirmation</h5>
+
+  <form>
+    <div class="mb-3">
+      <label>Full Name</label>
+      <input type="text" class="form-control" required>
+    </div>
+
+    <div class="mb-3">
+      <label>Email</label>
+      <input type="email" class="form-control" required>
+    </div>
+
+    <div class="mb-3">
+      <label>Payment Method</label>
+      <input type="text" id="selectedMethod" class="form-control" readonly>
+    </div>
+
+    <div class="mb-3">
+      <label>Transaction / Reference ID</label>
+      <input type="text" class="form-control" required>
+    </div>
+
+    <button type="submit" class="btn btn-success">
+      Submit Payment Confirmation
+    </button>
+  </form>
+</div>
+
+
 
     <div class="row">
       <div class="col-lg-8 mx-auto">
@@ -126,7 +230,7 @@
 
     <div class="text-center mt-5">
       <p class="fw-semibold mb-3">Ready to start? Request your payment details now.</p>
-      <a href="#contact" class="btn btn-primary btn-lg rounded-pill px-5 shadow">
+      <a href="free-consaltation.html" class="btn btn-primary btn-lg rounded-pill px-5 shadow">
         Request Invoice / Start Project
       </a>
     </div>
@@ -154,9 +258,32 @@
 
   </div>
 </footer>
-   
 
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script>
+function selectPayment(card) {
+
+  document.querySelectorAll('.payment-card').forEach(c => c.classList.remove('active'));
+  card.classList.add('active');
+
+  document.getElementById('payment-details').style.display = 'block';
+
+  document.querySelectorAll('.method-details').forEach(d => d.style.display = 'none');
+
+  const method = card.getAttribute('data-method');
+  document.getElementById(method).style.display = 'block';
+
+  document.getElementById('payment-details').scrollIntoView({ behavior: 'smooth' });
+}
+
+function openConfirmation(methodName) {
+  document.getElementById('payment-confirmation').style.display = 'block';
+  document.getElementById('selectedMethod').value = methodName;
+
+  document.getElementById('payment-confirmation').scrollIntoView({ behavior: 'smooth' });
+}
+</script>
+
+   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js" integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y" crossorigin="anonymous"></script>
 
 </body>
