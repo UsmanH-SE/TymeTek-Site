@@ -16,7 +16,57 @@ body {
   color: var(--text);
 }
 
-/* SECTION HEADING */
+.main-header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 999;
+  background: rgba(11,31,58,0.95);
+  backdrop-filter: blur(10px);
+}
+
+.header-container {
+  max-width: 1300px;
+  margin: auto;
+  height: 80px;
+  padding: 0 6%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.site-logo img {
+ 
+  width: 50%;
+ height: 50%;
+    object-fit: cover;
+}
+
+.site-nav a {
+  margin-left: 28px;
+  color: #e5e7eb;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.site-nav a:hover {
+  color: #1e90ff;
+}
+
+.nav-btn {
+  background: #1e90ff;
+  color: #fff !important;
+  padding: 8px 18px;
+  border-radius: 30px;
+}
+
+.nav-btn:hover {
+  background: #2563eb;
+}
+
+/* 
 .animated-heading {
   font-size: 50px;
   font-weight: 700;
@@ -25,6 +75,7 @@ body {
   animation: fadeInDown 1s forwards;
   margin-bottom: 10px;
   text-align: center;
+  padding-top: 5%;
 }
 
 @keyframes fadeInDown {
@@ -40,7 +91,7 @@ body {
   font-size: 1.1rem;
 }
 
-/* SERVICE CARDS */
+
 .service-card {
   background-color: #1E293B;
   border-radius: 16px;
@@ -67,14 +118,14 @@ body {
   font-size: 0.95rem;
 }
 
-/* Hover Animation */
+
 .service-card:hover {
   transform: translateY(-10px) scale(1.03);
   box-shadow: 0 20px 50px rgba(37, 99, 235, 0.4);
   border-color: var(--primary);
 }
 
-/* RESPONSIVE */
+
 @media (max-width: 992px) {
   .service-card {
     padding: 25px 15px;
@@ -85,4 +136,157 @@ body {
   .animated-heading {
     font-size: 38px;
   }
+} */
+
+:root {
+  --primary: #3b82f6;
+  --bg-darker: #0f172a;
+  --card-bg: #1e293b;
+  --text-gray: #94a3b8;
+}
+
+.bg-dark-custom {
+  background-color: var(--bg-darker);
+}
+
+.animated-heading {
+  animation: fadeInDown 1s ease-out forwards;
+}
+
+.heading-line {
+  width: 60px;
+  height: 4px;
+  background-color: var(--primary);
+  border-radius: 2px;
+  
+}
+
+.container{
+  padding-top: 6%;
+}
+
+.text-light-muted {
+  color: var(--text-gray);
+  max-width: 600px;
+  font-size: 1.05rem;
+}
+
+/* SERVICE CARDS ENHANCED */
+.service-card {
+  background-color: var(--card-bg);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  padding: 40px 30px;
+  height: 100%;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  position: relative;
+  overflow: hidden;
+}
+
+.service-card:hover {
+  transform: translateY(-12px);
+  border-color: var(--primary);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.icon-circle {
+  width: 70px;
+  height: 70px;
+  background: rgba(59, 130, 246, 0.1);
+  color: var(--primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 15px;
+  font-size: 30px;
+  margin-bottom: 25px;
+  transition: 0.3s;
+}
+
+.service-card:hover .icon-circle {
+  background: var(--primary);
+  color: #fff;
+  transform: rotateY(360deg);
+}
+
+.service-card h5 {
+  color: #f8fafc;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.service-card p {
+  color: var(--text-gray);
+  line-height: 1.6;
+  margin-bottom: 25px;
+}
+
+.service-link {
+  color: var(--primary);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: 0.3s;
+}
+
+.service-link i {
+  margin-left: 5px;
+  transition: transform 0.3s;
+}
+
+.service-card:hover .service-link i {
+  transform: translateX(5px);
+}
+
+/* Animations */
+@keyframes fadeInDown {
+  0% { opacity: 0; transform: translateY(-20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+.footer-section {
+  background: #0b1f3a;
+  padding: 60px 6% 30px;
+  color: #e5e7eb;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: auto;
+  text-align: center;
+}
+
+.footer-brand h3 {
+  font-size: 26px;
+  font-weight: 800;
+  color: #ffffff;
+}
+
+.footer-brand p {
+  margin-top: 6px;
+  font-size: 14px;
+  color: #c7d2fe;
+}
+
+.footer-socials {
+  margin: 25px 0;
+}
+
+.footer-socials a {
+  display: inline-block;
+  margin: 0 10px;
+  color: #1e90ff;
+  font-size: 22px;
+  transition: 0.3s;
+}
+
+.footer-socials a:hover {
+  color: #ffffff;
+  transform: translateY(-3px);
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255,255,255,0.1);
+  padding-top: 20px;
+  font-size: 13px;
+  color: #9ca3af;
 }

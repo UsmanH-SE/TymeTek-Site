@@ -6,81 +6,154 @@
     <title>Document</title>
       <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     
-    <link rel="stylesheet" href="/payment.css">
+    <link rel="stylesheet" href="payment.css">
 </head>
 <body>
 
- <section id="payments" class="py-5 bg-white">
-  <div class="container">
+  <header class="main-header">
+  <div class="header-container">
 
-    <!-- Heading -->
+    <div class="site-logo">
+      <img src="logo.svg" alt="TymeTek Logo">
+    </div>
+
+    <nav class="site-nav">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="payment.html">Payment</a>
+      <a href="support.html" class="nav-btn">Contact</a>
+    </nav>
+
+  </div>
+</header>
+
+<section id="payments" class="py-5 bg-white">
+  <div class="container mt-5">
+
     <div class="text-center mb-5">
-      <h2 class="fw-bold">Payment Methods</h2>
-      <p class="text-muted">
-        Secure, transparent, and flexible payment options for local and international clients.
+      <span class="text-primary fw-bold text-uppercase">Financial Security</span>
+      <h2 class="display-5 fw-bold mt-2">Flexible Payment Options</h2>
+      <p class="text-muted mx-auto" style="max-width: 600px;">
+        We offer a variety of secure channels for both our local and global partners to ensure seamless project initiation.
       </p>
     </div>
 
-    <!-- Payment Methods -->
-    <div class="row text-center mb-5">
-
-      <div class="col-md-3 mb-4">
-        <div class="payment-card">
-          <h6>Bank Transfer</h6>
-          <p>Direct bank payment (PKR)</p>
+    <div class="row g-4 text-center mb-5">
+      <div class="col-md-3">
+        <div class="payment-card shadow-sm h-100">
+          <div class="payment-icon-wrapper mb-3">
+            <i class="bi bi-bank"></i>
+          </div>
+          <h5 class="fw-bold">Bank Transfer</h5>
+          <p class="text-muted small">Direct secure payments via PKR accounts for local clients.</p>
         </div>
       </div>
 
-      <div class="col-md-3 mb-4">
-        <div class="payment-card">
-          <h6>Payoneer</h6>
-          <p>International clients (USD)</p>
+      <div class="col-md-3">
+        <div class="payment-card shadow-sm h-100">
+          <div class="payment-icon-wrapper mb-3">
+            <i class="bi bi-globe-americas"></i>
+          </div>
+          <h5 class="fw-bold">Payoneer</h5>
+          <p class="text-muted small">The preferred choice for our international partners (USD).</p>
         </div>
       </div>
 
-      <div class="col-md-3 mb-4">
-        <div class="payment-card">
-          <h6>EasyPaisa</h6>
-          <p>Fast & secure local payments</p>
+      <div class="col-md-3">
+        <div class="payment-card shadow-sm h-100">
+          <div class="payment-icon-wrapper mb-3">
+            <i class="bi bi-wallet2"></i>
+          </div>
+          <h5 class="fw-bold">EasyPaisa</h5>
+          <p class="text-muted small">Instant and convenient mobile wallet transfers.</p>
         </div>
       </div>
 
-      <div class="col-md-3 mb-4">
-        <div class="payment-card">
-          <h6>JazzCash</h6>
-          <p>Mobile wallet payments</p>
+      <div class="col-md-3">
+        <div class="payment-card shadow-sm h-100">
+          <div class="payment-icon-wrapper mb-3">
+            <i class="bi bi-phone-vibrate"></i>
+          </div>
+          <h5 class="fw-bold">JazzCash</h5>
+          <p class="text-muted small">Quick digital payments via JazzCash mobile accounts.</p>
         </div>
       </div>
-
     </div>
 
-    <!-- Payment Policy -->
     <div class="row">
-      <div class="col-lg-10 mx-auto">
+      <div class="col-lg-8 mx-auto">
+        <div class="policy-wrapper p-4 p-md-5 rounded-4 border bg-light">
+          <div class="d-flex align-items-center mb-4">
+            <i class="bi bi-info-circle-fill text-primary fs-3 me-3"></i>
+            <h4 class="fw-bold mb-0">Our Payment Policy</h4>
+          </div>
 
-        <h4 class="fw-semibold mb-3 text-center">Payment Policy</h4>
-
-        <ul class="payment-policy">
-          <li>All projects require an advance payment before work begins.</li>
-          <li>Advance payment is typically <strong>30%–50%</strong> of the total project cost.</li>
-          <li>Remaining payment is due after agreed milestones or before final delivery.</li>
-          <li>Payments once made are non-refundable after project initiation.</li>
-          <li>Currency is finalized before the project starts (PKR or USD).</li>
-          <li>Invoices and payment details are shared officially via email.</li>
-        </ul>
-
+          <div class="row g-3">
+            <div class="col-md-6">
+              <div class="policy-item">
+                <i class="bi bi-check2-circle text-success me-2"></i>
+                <span><strong>30%–50%</strong> Advance payment required to start.</span>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="policy-item">
+                <i class="bi bi-check2-circle text-success me-2"></i>
+                <span>Final payment due upon <strong>milestone completion</strong>.</span>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="policy-item">
+                <i class="bi bi-check2-circle text-success me-2"></i>
+                <span>Currency choice: <strong>PKR or USD</strong>.</span>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="policy-item">
+                <i class="bi bi-check2-circle text-success me-2"></i>
+                <span>Official invoices sent via <strong>Email</strong>.</span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="mt-4 pt-3 border-top">
+            <p class="small text-muted mb-0 italic">Note: Payments are non-refundable once the development phase has officially initiated.</p>
+          </div>
+        </div>
       </div>
     </div>
 
-    <!-- CTA -->
     <div class="text-center mt-5">
-      <a href="#contact" class="btn btn-primary">
+      <p class="fw-semibold mb-3">Ready to start? Request your payment details now.</p>
+      <a href="#contact" class="btn btn-primary btn-lg rounded-pill px-5 shadow">
         Request Invoice / Start Project
       </a>
     </div>
 
   </div>
 </section>
+
+<footer class="footer-section">
+  <div class="footer-content">
+
+    <div class="footer-brand">
+      <h3>TymeTek</h3>
+      <p>Professional Web Design & Development Services</p>
+    </div>
+
+    <div class="footer-socials">
+      <a href="#"><i class="fi fi-brands-facebook"></i></a>
+      <a href="#"><i class="fi fi-brands-whatsapp"></i></a>
+      <a href="#"><i class="fi fi-ss-circle-envelope"></i></a>
+    </div>
+
+    <div class="footer-bottom">
+      © 2025 TymeTek. All Rights Reserved.
+    </div>
+
+  </div>
+</footer>
    
 
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
